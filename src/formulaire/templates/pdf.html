@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .title {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .form-row div:first-child {
+            font-weight: bold;
+            flex-basis: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="media/icon.jpeg" alt="Logo">
+        </div>
+        <div class="title">
+            Formulaire No {{ formulaire.id }}
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2>Formulaire Leadership</h2>
+
+        <div class="form-row">
+            <div>Nom</div>
+            <div>{{ formulaire.nom }}</div>
+        </div>
+
+        <div class="form-row">
+            <div>Prenom</div>
+            <div>{{ formulaire.prenom }}</div>
+        </div>
+
+        <div class="form-row">
+            <div>Date de naissance</div>
+            <div>{{ formulaire.birthdate }}</div>
+        </div>
+
+        <div class="form-row">
+            <div>Pays</div>
+            <div>{{ formulaire.pays }}</div>
+        </div>
+
+        <div class="form-row">
+            <div>Telephone</div>
+            <div>{{ formulaire.tel }}</div>
+        </div>
+    </div>
+</body>
+</html>
